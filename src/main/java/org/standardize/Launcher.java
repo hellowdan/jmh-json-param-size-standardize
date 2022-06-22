@@ -17,7 +17,7 @@ public class Launcher {
         ArrayList<JSONObject> jsonOrigin = getJSONFromFile(args[0]);
         ArrayList<JSONObject> jsonStandardizedArray = getStandardJSON(jsonOrigin);
 
-        String outputFileName = "std-results.json";
+        String outputFileName = "std-jmh-results.json";
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
         writer.writeValue(new File(outputFileName), jsonStandardizedArray);
